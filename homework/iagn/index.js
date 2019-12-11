@@ -1,3 +1,6 @@
+npm install
+npx eslint homework/iagn
+Fix code style errors
 //Homework/2/iagn
 //Problem 1
 //Program must return numbers from 1 to 100 including condition that 
@@ -58,4 +61,3 @@ if (result===true) {
 	resultExp='Yes, you are lucky! Your expression is centrally symmetrical!';
 } else resultExp='No, not at this time...';
 console.log(resultExp);
-
