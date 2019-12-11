@@ -1,31 +1,30 @@
 <script>
-// Palindrom
-let str = '98789';
-str = str.toLowerCase()
-let arr = str.split('')
-let textShift = ''
-let textPop = ''
-let res = ''
-let i
+// Palindrome
 
-for (i = 0; i < arr.length; i++) {
-    textShift += arr.shift()
-    textPop += arr.pop()
-}
+function palindrome(str) {
 
-function palidrom() {
+    str = str.toLowerCase()
+    let arr = str.split('')
+    let textShift = ''
+    let textPop = ''
+    let res = ''
+
+    for (let i = 0; i < arr.length; i++) {
+        textShift += arr.shift()
+        textPop += arr.pop()
+    }
+
     if (textShift === textPop) {
-        res = 'this word is palidrom'
+        res = 'this word is palindrome'
     }
     else {
-        res = 'this word is NOT palidrom'
+        res = 'this word is NOT palindrome'
     }
     
 }
 
-palidrom()
+palindrome('Annaanna')
 
-console.log(res)
 
 //FizzBuzz
 
