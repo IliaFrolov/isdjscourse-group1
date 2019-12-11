@@ -9,23 +9,22 @@ Fix code style errors
 //and "FizzBuzz" for both.
 
 let result = '';
-let i = 0;
+let c = 0;
 let dev3, dev5, dev15;
 do {
-	i = i + 1;
-	dev3=Number.isInteger(i/3);
-	dev5=Number.isInteger(i/5);
-	dev15=Number.isInteger(i/15);
+	c = c + 1;
+	dev3=Number.isInteger(c/3);
+	dev5=Number.isInteger(c/5);
+	dev15=Number.isInteger(c/15);
 	if (dev15) {
 		result='FizzBuzz';
 	} else if (dev3) {
 		result='Fizz';
 	} else if (dev5){
 		result='Buzz';
-	} else result = i;
+	} else result = c;
 	console.log(result);
-} while (i < 100);
-
+} while (c < 100);
 
 //Problem 2
 //Program must check word, string or number 
