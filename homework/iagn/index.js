@@ -58,3 +58,4 @@ if (result===true) {
 	resultExp='Yes, you are lucky! Your expression is centrally symmetrical!';
 } else resultExp='No, not at this time...';
 console.log(resultExp);
+
