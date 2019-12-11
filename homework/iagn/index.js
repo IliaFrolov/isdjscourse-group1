@@ -31,7 +31,7 @@ do {
 //Program must check word, string or number 
 //if its elements' values are centrally simetrical
 
-let result=false, resultExp = '';
+let bulResult=false, resultExp = '';
 let initial_str = prompt('Please enter the string, word or number', 'string, word or number'); 
 	if (initial_str != null) {
 		console.log('Your initial string is: ' + initial_str + '!');
@@ -48,16 +48,16 @@ let j=strLength-1;
 
 do {
 	if (strArray[i]===strArray[j]) {
-		result=true; //we should continue checking other pairs of symbols
+		bulResult=true; //we should continue checking other pairs of symbols
 		i=i+1;
 		j=j-1;
 	} else {
-		result=false; //here we can stop since there's no sense to continue, we already know that's not gonna happen
+		bulResult=false; //here we can stop since there's no sense to continue, we already know that's not gonna happen
 		i=j+1;
 	}
 } while (i<j);
 
-if (result===true) {
+if (bulResult===true) {
 	resultExp='Yes, you are lucky! Your expression is centrally symmetrical!';
 } else resultExp='No, not at this time...';
 console.log(resultExp);
