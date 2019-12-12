@@ -21,10 +21,8 @@ function fizzBuzz () {
 				unit='Buzz';
 			} else unit = count;
 		console.log(unit);
-			
 		} while (count < 100);
 }
-
 fizzBuzz();
 
 //Problem 2
@@ -49,15 +47,9 @@ function isLucky (initial_str) {
 			i=j+1;
 		}
 	} while (i<j);
-
 	if (bulResult===true) {
 		resultExp='Yes, you are lucky! Your expression is centrally symmetrical!';
 	} else resultExp='No, not at this time...';
 	console.log(resultExp);
 }
-
 isLucky(34543);
-isLucky('ertre');
-isLucky('abba');
-isLucky('tyuio');
-isLucky('trewqp');
