@@ -17,40 +17,41 @@ function fizzBuzz () {
          unit = 'FizzBuzz';
       } else if (dev3) {
          unit = 'Fizz';
-      } else if (dev5){
+      } else if (dev5) {
          unit = 'Buzz';
       } else {
 		  unit = count;
       }
       console.log(unit);
-      } while (count < 100);
+   } while (count < 100);
 }
 fizzBuzz();
 // Problem 2
 // Program must check word, string or number
 // if its elements' values are centrally simetrical
+let initial_str;
 function isLucky (initial_str) {
    let bulResult = false, resultExp = '';
-   let strArray = String(initial_str).split('');//modify initial_str to string data type and fill in the array where elements are symbols of initial_str
-   console.log("Your array has the next following elements: " + strArray);//array output
-   let strLength = strArray.length;//strLength = number of elements in strArray
-   console.log("The length of your array or number of its symbols is: " + strLength);//output
-   // let loopSelector=Number.isInteger(strLength/2);//even=true; odd=false
-   let i = 0;//When we compare two different elements out of the array we'll need some indicators to do so
+   let strArray = String(initial_str).split('');// modify initial_str to string data type and fill in the array where elements are symbols of initial_str
+   console.log("Your array has the next following elements: " + strArray);// array output
+   const strLength = strArray.length;//strLength = number of elements in strArray
+   console.log("The length of your array or number of its symbols is: " + strLength);// output
+   // let loopSelector=Number.isInteger(strLength/2);// even=true; odd=false
+   let i = 0;// When we compare two different elements out of the array we'll need some indicators to do so
    let j = strLength - 1;
    do {
       if (strArray[i] === strArray[j]) {
-         bulResult=true; //we should continue checking other pairs of symbols
+         bulResult=true; // we should continue checking other pairs of symbols
          i = i + 1;
          j = j - 1;
       } else
-         bulResult=false; //here we can stop since there's no sense to continue, we already know that's not gonna happen
+         bulResult=false; // here we can stop since there's no sense to continue, we already know that's not gonna happen
          i = j + 1;
    } while (i < j);
    if (bulResult === true) {
       resultExp = 'Yes, you are lucky! Your expression is centrally symmetrical!';
    } else resultExp = 'No, not at this time...';
-	console.log(resultExp);
+   console.log(resultExp);
 }
 isLucky(34543);
 isLucky('ertre');
