@@ -4,24 +4,25 @@
 //"Fizz" is returned instead of the number devidable by 3,
 //"Buzz" is returned instead of the number devidable by 5,
 //and "FizzBuzz" for both.
+let dev3, dev5, dev15;
 function fizzBuzz () {
-	let result = '';
-	let c = 0;
-	let dev3, dev5, dev15;
-	do {
-		c = c + 1;
-		dev3=Number.isInteger(c/3);
-		dev5=Number.isInteger(c/5);
-		dev15=Number.isInteger(c/15);
-		if (dev15) {
-			result='FizzBuzz';
-		} else if (dev3) {
-			result='Fizz';
-		} else if (dev5){
-			result='Buzz';
-		} else result = c;
-		console.log(result);
-	} while (c < 100);
+	let unit = '';
+	let count = 0;
+		do {
+			count = count + 1;
+			dev3=Number.isInteger(count/3);
+			dev5=Number.isInteger(count/5);
+			dev15=Number.isInteger(count/15);
+			if (dev15) {
+				unit='FizzBuzz';
+			} else if (dev3) {
+				unit='Fizz';
+			} else if (dev5){
+				unit='Buzz';
+			} else unit = count;
+		console.log(unit);
+			
+		} while (count < 100);
 }
 
 fizzBuzz();
@@ -29,7 +30,6 @@ fizzBuzz();
 //Problem 2
 //Program must check word, string or number 
 //if its elements' values are centrally simetrical
-let initial_str='';
 function isLucky (initial_str) {
 	let bulResult=false, resultExp = '';
 	let strArray = String(initial_str).split('');//modify initial_str to string data type and fill in the array where elements are symbols of initial_str
