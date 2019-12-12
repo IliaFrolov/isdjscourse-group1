@@ -1,6 +1,6 @@
 // Homework/2/iagn
 // Problem 1
-// Program must return numbers from 1 to 100 including condition that 
+// Program must return numbers from 1 to 100 including condition that
 // "Fizz" is returned instead of the number devidable by 3,
 // "Buzz" is returned instead of the number devidable by 5,
 // and "FizzBuzz" for both.
@@ -23,11 +23,9 @@ function fizzBuzz () {
       console.log(unit);	
       } while (count < 100);
 }
-
 fizzBuzz();
-
 // Problem 2
-// Program must check word, string or number 
+// Program must check word, string or number
 // if its elements' values are centrally simetrical
 function isLucky (initial_str) {
    let bulResult = false, resultExp = '';
@@ -43,7 +41,7 @@ function isLucky (initial_str) {
          bulResult=true; //we should continue checking other pairs of symbols
          i = i + 1;
          j = j - 1;
-      } else 
+      } else
          bulResult=false; //here we can stop since there's no sense to continue, we already know that's not gonna happen
          i = j + 1;
    } while (i < j);
@@ -52,7 +50,6 @@ function isLucky (initial_str) {
    } else resultExp = 'No, not at this time...';
 	console.log(resultExp);
 }
-
 isLucky(34543);
 isLucky('ertre');
 isLucky('abba');
