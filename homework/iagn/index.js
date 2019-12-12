@@ -30,7 +30,7 @@ fizzBuzz();
 // Problem 2
 // Program must check word, string or number 
 // if its elements' values are centrally simetrical
-function is Lucky (initial_str) {
+function isLucky (initial_str) {
    let bulResult = false, resultExp = '';
    let strArray = String(initial_str).split('');//modify initial_str to string data type and fill in the array where elements are symbols of initial_str
    console.log("Your array has the next following elements: " + strArray);//array output
