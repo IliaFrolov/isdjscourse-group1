@@ -1,6 +1,7 @@
 // Palindrome
 
 function palindrome (str) {
+   str = 'anna989anna';
    str = str.toLowerCase();
    const arr = str.split('');
    let textShift = '';
@@ -18,7 +19,7 @@ function palindrome (str) {
    }
 }
 
-palindrome('96588');
+palindrome();
 
 // FizzBuzz
 
