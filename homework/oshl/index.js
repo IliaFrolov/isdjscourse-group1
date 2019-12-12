@@ -17,7 +17,11 @@
    // Task 2. Palindrome
    console.log('----- Task 2 -----');
    function palindromeChecker (val) {
-      const arr = val.toString().split('');
+      if (!val) {
+         console.log('Please, enter valid value');
+         return;
+      }
+      const arr = val.toString().toLowerCase().split('');
       for (let n = 1; n <= Math.floor(arr.length / 2); n++) {
          if (arr[n - 1] !== arr[arr.length - n]) {
             console.log(`${val} is not palindrome`);
@@ -27,8 +31,9 @@
       console.log(`${val} is palindrome`);
    }
 
-   palindromeChecker(10101);
-   palindromeChecker('abba');
-   palindromeChecker('ok ko');
-   palindromeChecker(12358);
+   palindromeChecker();
+   palindromeChecker(null);
+   palindromeChecker([1, 2, 1]);
+   palindromeChecker('Aa');
+   palindromeChecker(1);
 })();
