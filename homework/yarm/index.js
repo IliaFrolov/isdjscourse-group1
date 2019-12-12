@@ -1,8 +1,13 @@
 // Palindrome
 
 function palindrome (str) {
-   str = 'anna989anna';
-   str = str.toLowerCase();
+   if (typeof str !== 'string') {
+      return console.log('Error input, please to correct check your request enter in string format example "your word or number"');
+   };
+   if (typeof str === 'string') {
+      str = str.toLowerCase().replace(/ /g, '');
+   }
+
    const arr = str.split('');
    let textShift = '';
    let textPop = '';
@@ -19,7 +24,7 @@ function palindrome (str) {
    }
 }
 
-palindrome();
+palindrome('Anna an na');
 
 // FizzBuzz
 
