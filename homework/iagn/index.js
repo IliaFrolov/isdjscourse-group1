@@ -29,8 +29,8 @@ fizzBuzz();
 // Problem 2
 // Program must check word, string or number
 // if its elements' values are centrally simetrical
-let initial_str;
-function isLucky (initial_str) {
+function isLucky (string) {
+   let initial_str = string;
    let bulResult = false, resultExp = '';
    let strArray = String(initial_str).split('');// modify initial_str to string data type and fill in the array where elements are symbols of initial_str
    console.log("Your array has the next following elements: " + strArray);// array output
@@ -41,12 +41,13 @@ function isLucky (initial_str) {
    let j = strLength - 1;
    do {
       if (strArray[i] === strArray[j]) {
-         bulResult=true; // we should continue checking other pairs of symbols
+         bulResult = true; // we should continue checking other pairs of symbols
          i = i + 1;
          j = j - 1;
-      } else
-         bulResult=false; // here we can stop since there's no sense to continue, we already know that's not gonna happen
+      } else {
+         bulResult = false; // here we can stop since there's no sense to continue, we already know that's not gonna happen
          i = j + 1;
+      } 
    } while (i < j);
    if (bulResult === true) {
       resultExp = 'Yes, you are lucky! Your expression is centrally symmetrical!';
