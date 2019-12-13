@@ -20,7 +20,7 @@ function fizzBuzz () {
       } else if (dev5) {
          unit = 'Buzz';
       } else {
-		  unit = count;
+         unit = count;
       }
       console.log(unit);
    } while (count < 100);
@@ -30,12 +30,12 @@ fizzBuzz();
 // Program must check word, string or number
 // if its elements' values are centrally simetrical
 function isLucky (string) {
-   let initial_str = string;
-   let bulResult = false, resultExp = '';
-   let strArray = String(initial_str).split('');// modify initial_str to string data type and fill in the array where elements are symbols of initial_str
-   console.log("Your array has the next following elements: " + strArray);// array output
-   const strLength = strArray.length;//strLength = number of elements in strArray
-   console.log("The length of your array or number of its symbols is: " + strLength);// output
+   const initial_str = string;
+   let bulResult = false; let resultExp = '';
+   const strArray = String(initial_str).split('');// modify initial_str to string data type and fill in the array where elements are symbols of initial_str
+   console.log('Your array has the next following elements: ' + strArray);// array output
+   const strLength = strArray.length;// strLength = number of elements in strArray
+   console.log('The length of your array or number of its symbols is: ' + strLength);// output
    // let loopSelector=Number.isInteger(strLength/2);// even=true; odd=false
    let i = 0;// When we compare two different elements out of the array we'll need some indicators to do so
    let j = strLength - 1;
@@ -47,11 +47,13 @@ function isLucky (string) {
       } else {
          bulResult = false; // here we can stop since there's no sense to continue, we already know that's not gonna happen
          i = j + 1;
-      } 
+      }
    } while (i < j);
    if (bulResult === true) {
       resultExp = 'Yes, you are lucky! Your expression is centrally symmetrical!';
-   } else resultExp = 'No, not at this time...';
+   } else {
+      resultExp = 'No, not at this time...';
+   }
    console.log(resultExp);
 }
 isLucky(34543);
