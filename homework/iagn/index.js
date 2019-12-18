@@ -29,35 +29,43 @@ fizzBuzz();
 // Problem 2
 // Program must check word, string or number
 // if its elements' values are centrally simetrical
-function isLucky (string) {
-   const initString = string;
+function isLucky (myString) {
+   const initString = myString;
    let bulResult = false; let resultExp = '';
    const strArray = String(initString).split('');// modify initString to string data type and fill in the array where elements are symbols of initString
-   console.log('Your array has the next following elements: ' + strArray);// array output
    const strLength = strArray.length;// strLength = number of elements in strArray
-   console.log('The length of your array or number of its symbols is: ' + strLength);// output
    // let loopSelector=Number.isInteger(strLength/2);// even=true; odd=false
    let i = 0;// When we compare two different elements out of the array we'll need some indicators to do so
    let j = strLength - 1;
-   do {
-      if (strArray[i] === strArray[j]) {
-         bulResult = true; // we should continue checking other pairs of symbols
-         i = i + 1;
-         j = j - 1;
+   if (((typeof(initString) == 'string') || (typeof(initString) == 'number')) && (typeof(initString) != 'object')) {
+      do {
+         if (strArray[i] === strArray[j]) {
+            bulResult = true; // we should continue checking other pairs of symbols
+            i = i + 1;
+            j = j - 1;
+         } else {
+            bulResult = false; // here we can stop since there's no sense to continue, we already know that's not gonna happen
+            i = j + 1;
+         }
+      } while (i < j);
+      if (bulResult === true) {
+         resultExp = 'Yes, you are lucky! Your expression is centrally symmetrical!';
       } else {
-         bulResult = false; // here we can stop since there's no sense to continue, we already know that's not gonna happen
-         i = j + 1;
+         resultExp = 'No, not at this time...';
       }
-   } while (i < j);
-   if (bulResult === true) {
-      resultExp = 'Yes, you are lucky! Your expression is centrally symmetrical!';
-   } else {
-      resultExp = 'No, not at this time...';
+      console.log('Your array has the next following elements: ' + strArray);// array output
+	  console.log('The length of your array or number of its symbols is: ' + strLength);// output
+	  console.log(resultExp);
+   } else {	   
+      console.log('Please, try string or number only');
    }
-   console.log(resultExp);
+   
+
 }
 isLucky(34543);
 isLucky('ertre');
 isLucky('abba');
 isLucky('tyuio');
 isLucky('trewqp');
+isLucky([1,2,1]);
+isLucky({toString: () => 'aaa'});
