@@ -57,7 +57,7 @@ function isLucky (myString) {
       console.log('The length of your array or number of its symbols is: ' + strLength);// output
       console.log(resultExp);
    } else {
-   console.log('Please, try string or number only');
+      console.log('Please, try string or number only');
    }
 }
 isLucky(34543);
