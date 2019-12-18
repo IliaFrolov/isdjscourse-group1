@@ -37,7 +37,7 @@ function isLucky (myString) {
    // let loopSelector=Number.isInteger(strLength/2);// even=true; odd=false
    let i = 0;// When we compare two different elements out of the array we'll need some indicators to do so
    let j = strLength - 1;
-   if (((typeof(initString) == 'string') || (typeof(initString) == 'number')) && (typeof(initString) != 'object')) {
+   if (((typeof (initString) === 'string') || (typeof (initString) === 'number')) && (typeof (initString) !== 'object')) {
       do {
          if (strArray[i] === strArray[j]) {
             bulResult = true; // we should continue checking other pairs of symbols
@@ -54,18 +54,16 @@ function isLucky (myString) {
          resultExp = 'No, not at this time...';
       }
       console.log('Your array has the next following elements: ' + strArray);// array output
-	  console.log('The length of your array or number of its symbols is: ' + strLength);// output
-	  console.log(resultExp);
-   } else {	   
-      console.log('Please, try string or number only');
+      console.log('The length of your array or number of its symbols is: ' + strLength);// output
+      console.log(resultExp);
+   } else {
+   console.log('Please, try string or number only');
    }
-   
-
 }
 isLucky(34543);
 isLucky('ertre');
 isLucky('abba');
 isLucky('tyuio');
 isLucky('trewqp');
-isLucky([1,2,1]);
-isLucky({toString: () => 'aaa'});
+isLucky([1, 2, 1]);
+isLucky({ toString: () => 'aaa' });
